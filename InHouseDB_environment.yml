@@ -1,0 +1,16 @@
+name: InHouseDB_environment
+channels:
+        - bioconda
+        - conda-forge
+dependencies:
+        - samtools=1.9
+        - htslib=1.9
+        - python=3.6
+        - bcftools
+        - numpy
+        - pip
+        - pandas
+        - pysam
+        - pybedtools
+        - bedtools
+        - survivor

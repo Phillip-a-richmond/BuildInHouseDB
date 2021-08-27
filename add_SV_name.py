@@ -13,7 +13,7 @@ for line in infile:
 	end=cols[2]
 	AC=cols[5]
 	SV= chr + ":" + start + ":" + end
-	AC="AC:" + str(AC) + ":chr" + SV
+	AC="AC:" + str(AC) + ":" + SV
 	cols.append(SV)
 	cols.append(AC)
 	newline="\t".join(cols)

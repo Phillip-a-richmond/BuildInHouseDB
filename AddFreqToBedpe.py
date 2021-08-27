@@ -20,6 +20,7 @@ def BuildAnnotatedBEDPE(invcf,inbedpe,outbedpe):
 # DUP00110SUR
 # DEL000SUR, etc. where this can be parsed as DEL00-VariantNumber-SUR
 # And I want the VariantNumber. DELS and DUPS are a part of the same count
+# I'm also fixing the Translocation calls here
 
 # Dictionary where the key is the variant ID# stored as a string, and the value is the ## in SUPP=##;
 	VariantCounts = {}
@@ -48,8 +49,8 @@ def BuildAnnotatedBEDPE(invcf,inbedpe,outbedpe):
 			var_count = int(VariantCounts[var_num][0])
 			var_af = VariantCounts[var_num][1]	
 		except:
-			print "Issue with this variant"
-			print line
+			print("Issue with this variant")
+			print(line)
 			continue
 		outbedpe.write("%s\t%d\t%f\n"%(line,var_count,var_af))
 
